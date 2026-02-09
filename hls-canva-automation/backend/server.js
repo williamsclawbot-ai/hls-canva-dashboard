@@ -17,8 +17,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Configuration
 const CANVA_API_BASE = 'https://api.canva.com';
-const CANVA_CLIENT_ID = process.env.CANVA_CLIENT_ID || 'OC-AZxAnRiDaaya';
-const CANVA_CLIENT_SECRET = process.env.CANVA_CLIENT_SECRET || 'YOUR_SECRET_HERE';
+const CANVA_CLIENT_ID = process.env.CANVA_CLIENT_ID;
+const CANVA_CLIENT_SECRET = process.env.CANVA_CLIENT_SECRET;
 
 // Data storage paths
 const dataDir = path.join(__dirname, '..', 'data');
