@@ -134,7 +134,7 @@ That's it! ✅
 
 ### ✅ Already Configured
 - **CANVA_CLIENT_ID**: `OC-AZxAnRiDaaya`
-- **CANVA_CLIENT_SECRET**: `SECRET_REMOVED_FROM_HISTORY`
+- **CANVA_CLIENT_SECRET**: See `backend/.env.example` (configure in `backend/.env`)
 - Location: `backend/.env`
 
 ### ⏳ Waiting for Jade

@@ -84,12 +84,12 @@ hls-canva-automation/
 
 ### Configuration
 
-The backend is pre-configured with HLS Canva credentials. Check `backend/.env`:
+The backend requires HLS Canva credentials. Copy `backend/.env.example` to `backend/.env` and configure:
 
 ```
 PORT=5000
-CANVA_CLIENT_ID=OC-AZxAnRiDaaya
-CANVA_CLIENT_SECRET=SECRET_REMOVED_FROM_HISTORY
+CANVA_CLIENT_ID=your_client_id_here
+CANVA_CLIENT_SECRET=your_client_secret_here
 ```
 
 For additional integrations (when ready), add:
