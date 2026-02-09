@@ -1,0 +1,25 @@
+{
+  "name": "hls-canva-dashboard",
+  "version": "1.0.0",
+  "description": "Hello Little Sleepers Canva Design Automation Dashboard",
+  "private": true,
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  },
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install && cd ..",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run start",
+    "build": "cd frontend && npm run build",
+    "start": "node backend/server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ]
+}
