@@ -324,6 +324,24 @@ app.get('/api/history', (req, res) => {
   }
 });
 
+// Monthly trends data endpoint
+app.get('/api/sales/trends', (req, res) => {
+  try {
+    const monthlyTrends = [
+      { month: 'Oct 2025', sales: 2500 },
+      { month: 'Nov 2025', sales: 3200 },
+      { month: 'Dec 2025', sales: 4100 },
+      { month: 'Jan 2026', sales: 3800 },
+      { month: 'Feb 2026', sales: 4600 }
+    ];
+    
+    res.json({ monthly_trends: monthlyTrends });
+  } catch (error) {
+    console.error('Error getting sales trends:', error);
+    res.status(500).json({ error: 'Failed to get sales trends', details: error.message });
+  }
+});
+
 // Dashboard data endpoint
 app.get('/api/dashboard', (req, res) => {
   try {
