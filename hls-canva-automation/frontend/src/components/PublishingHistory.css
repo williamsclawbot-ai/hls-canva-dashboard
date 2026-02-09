@@ -1,0 +1,265 @@
+.publishing-history {
+  width: 100%;
+}
+
+.history-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #8b5a8f;
+}
+
+.stat-box.published {
+  border-left-color: #28a745;
+}
+
+.stat-box.pending {
+  border-left-color: #ffc107;
+}
+
+.stat-box.failed {
+  border-left-color: #dc3545;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #8b5a8f;
+  margin-bottom: 0.5rem;
+}
+
+.stat-box.published .stat-number {
+  color: #28a745;
+}
+
+.stat-box.pending .stat-number {
+  color: #ffc107;
+}
+
+.stat-box.failed .stat-number {
+  color: #dc3545;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.history-filters {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.filter-group select {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: white;
+  cursor: pointer;
+}
+
+.history-table-container {
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.history-table thead {
+  background: #f9f7f4;
+  border-bottom: 2px solid #8b5a8f;
+}
+
+.history-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 700;
+  color: #8b5a8f;
+}
+
+.history-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.history-table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.history-table tbody tr:hover {
+  background-color: #f9f7f4;
+}
+
+.history-table tbody tr.status-published {
+  border-left: 4px solid #28a745;
+}
+
+.history-table tbody tr.status-pending {
+  border-left: 4px solid #ffc107;
+}
+
+.history-table tbody tr.status-failed {
+  border-left: 4px solid #dc3545;
+}
+
+.date-cell {
+  color: #666;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.platform-cell {
+  min-width: 120px;
+}
+
+.platform-badge {
+  background: #e8d5e8;
+  color: #8b5a8f;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+.status-cell {
+  min-width: 100px;
+}
+
+.status-indicator {
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+.status-indicator.published {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-indicator.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-indicator.failed {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.message-cell {
+  color: #666;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.actions-cell {
+  min-width: 100px;
+  text-align: center;
+}
+
+.button-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.export-buttons .button {
+  flex: 1;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #999;
+}
+
+.empty-state p {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .history-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-group select {
+    width: 100%;
+  }
+
+  .history-table {
+    font-size: 0.85rem;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .history-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .history-table-container {
+    overflow-x: auto;
+    margin: -1.5rem -1.5rem;
+    padding: 1.5rem;
+  }
+
+  .history-table {
+    font-size: 0.8rem;
+    min-width: 500px;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 0.5rem;
+  }
+
+  .message-cell {
+    display: none;
+  }
+
+  .export-buttons {
+    flex-direction: column;
+  }
+}
